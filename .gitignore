@@ -1,0 +1,6 @@
+# Google App Engine generated folder
+appengine-generated/
+
+# Node.js
+node_modules/
+npm-debug.log

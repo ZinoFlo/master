@@ -1,21 +1,22 @@
-codexeng1L
-# Basic `dependabot.yml` file with
-# minimum configuration for two package managers
+# Eco-growth Discovery
 
-version: 2
-updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
-    schedule:
-      interval: "daily"
+Uncover your story with Eco-growth Discovery, a PowerPoint Add-in designed to explore data and narratives.
 
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `root` directory
-    directory: "/"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
+## New Features: Jules API Integration
+The add-in now integrates with the **Jules API** to fetch and display "sources" directly within PowerPoint.
+
+### How it works:
+1. **Authentication**: Uses `Office.auth.getAccessToken()` to securely retrieve an OAuth2 token.
+2. **Data Retrieval**: Fetches sources from `https://jules.googleapis.com/v1alpha/sources` using the authenticated token.
+3. **Visualization**: Dynamically renders the retrieved sources in the task pane.
+
+## Getting Started
+1. Run `npm install` to install dependencies (including `jest` for testing).
+2. Run `npm start` to start the local development server on port 3000.
+3. Run `npm test` to execute unit tests.
+4. Side-load the `manifest.xml` in PowerPoint to start using the extension.
+
+## Development
+- `index.html`: The main task pane UI.
+- `index.js`: Core logic for authentication, API calls, and UI rendering.
+- `api.test.js`: Unit tests for the API integration.
