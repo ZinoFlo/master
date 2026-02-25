@@ -1,0 +1,6 @@
+# 🛡️ Sentinel: Standard security-focused ignores
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
