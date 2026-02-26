@@ -1,21 +1,13 @@
-codexeng1L
-# Basic `dependabot.yml` file with
-# minimum configuration for two package managers
+# Eco-growth Discovery
 
-version: 2
-updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
-    schedule:
-      interval: "daily"
+Uncover your story.
+Ontdek je verhaal.
 
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `root` directory
-    directory: "/"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
+This repository contains the source code for the Eco-growth Discovery PowerPoint Add-in.
+
+The core application code is located in the `jules_session_5734658205099891605(3).zip` archive.
+
+## Project Metadata
+- **Display Name:** Eco-growth Discovery
+- **Description:** Uncover your story with Eco-growth Discovery.
+- **Provider:** JulienVink
