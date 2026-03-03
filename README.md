@@ -1,21 +1,19 @@
-codexeng1L
-# Basic `dependabot.yml` file with
-# minimum configuration for two package managers
+# eco-growth
+uncover your story
+ontdek je verhaal
 
-version: 2
-updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
-    schedule:
-      interval: "daily"
+## About
+`Template.pptm` is a PowerPoint macro-enabled template for Microsoft Office Web Extensions.
 
-  # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    # Look for a `Dockerfile` in the `root` directory
-    directory: "/"
-    # Check for updates once a week
-    schedule:
-      interval: "weekly"
+## Getting Started
+1. Run `npm install` to install dependencies.
+2. Run `npm start` to start the local development server.
+3. Side-load the `manifest.xml` in PowerPoint to start using the extension.
+
+## Troubleshooting
+### Docker MCP Gateway
+Attempts to run the Docker MCP Gateway (`docker/mcp-gateway`) in this environment may fail with `overlayfs` mount errors:
+```
+docker: Error response from daemon: failed to mount ... err: invalid argument
+```
+This is typically due to environment-specific limitations with the `overlay` storage driver or kernel configurations for container nesting.
