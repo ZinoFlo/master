@@ -1,5 +1,12 @@
-codexeng1L
-# Basic `dependabot.yml` file with
+# Eco-growth Discovery
+
+## Overview
+
+Uncover your story with Eco-growth Discovery. This is a Microsoft Office PowerPoint Web Extension.
+
+## Dependabot Configuration
+
+This repository uses a basic `dependabot.yml` file with
 # minimum configuration for two package managers
 
 version: 2
