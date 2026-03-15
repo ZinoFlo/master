@@ -1,0 +1,13 @@
+{
+  "name": "eco-growth-discovery",
+  "version": "1.0.0",
+  "description": "Eco-growth discovery project",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -S -p 3000",
+    "test": "npm audit && echo \"No tests implemented yet\" && exit 0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
