@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Eco-growth Discovery</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://appsforoffice.microsoft.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self';" />
+    <!--
+        Harden Content Security Policy:
+        - upgrade-insecure-requests: Ensures all traffic is served over HTTPS.
+        - form-action 'none': Prevents the document from submitting forms to any target.
+        - default-src 'self': Restricts content loading to the same origin by default.
+        - script-src: Allows local scripts and the official Microsoft Office JS library.
+        - style-src 'self' 'unsafe-inline': Allows local styles and inline styles (required for current layout).
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://appsforoffice.microsoft.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; form-action 'none';" />
+
+    <!--
+        Referrer Policy:
+        - no-referrer: Ensures no referrer information is sent when navigating to other sites or loading resources.
+    -->
+    <meta name="referrer" content="no-referrer">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
