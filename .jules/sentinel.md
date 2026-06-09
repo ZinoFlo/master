@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-06-09 - Hardening Transitive Dependencies with Overrides
+**Vulnerability:** Transitive dependencies like `follow-redirects` and `qs` introduced moderate-severity vulnerabilities (GHSA-r4q5-vmmm-2653, GHSA-q8mj-m7cp-5q26) through the `http-server` development dependency.
+**Learning:** For Office Add-ins using minimal tooling, transitive vulnerabilities in devDependencies still pose a risk to the development environment. Using the `overrides` field in `package.json` provides a declarative way to enforce secure versions of these sub-dependencies.
+**Prevention:** Regularly audit dependencies and use `overrides` to pin secure versions of transitive dependencies when direct updates are not possible or controlled by parent packages.
