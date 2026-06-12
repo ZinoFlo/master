@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-06-12 - Enforcing Secure Transitive Dependencies via Overrides
+**Vulnerability:** Transitive dependencies (like `follow-redirects` and `qs`) can have vulnerabilities that are not easily resolved if top-level dependencies don't update their requirements quickly.
+**Learning:** Using the `overrides` field in `package.json` allows for explicit control over transitive dependency versions, providing a strong defense-in-depth mechanism to resolve security advisories without waiting for upstream package updates.
+**Prevention:** Regularly audit dependencies and use `overrides` (for npm/pnpm) or `resolutions` (for yarn) to enforce minimum safe versions of vulnerable transitive packages.
