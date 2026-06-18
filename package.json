@@ -7,6 +7,10 @@
     "start": "http-server -p 3000",
     "test": "echo \"No tests implemented yet\" && exit 0"
   },
+  "overrides": {
+    "follow-redirects": "1.16.0",
+    "qs": "6.15.2"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:ZinoFlo/master.git"
