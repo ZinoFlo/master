@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-06-30 - Defense in Depth: CSP Hardening and Referrer-Policy
+**Vulnerability:** Office Add-ins can be susceptible to unintended data leakage through Referer headers and unauthorized form submissions if the environment is compromised.
+**Learning:** Hardening the Content Security Policy with `form-action 'none'` (as there are no forms) and implementing a strict `no-referrer` policy adds significant defense-in-depth layers with zero impact on the specialized functionality of this add-in.
+**Prevention:** Implement `form-action 'none'` in CSP for applications that do not use HTML forms to prevent data exfiltration. Use `no-referrer` to prevent leakage of internal URL structures or sensitive context via Referer headers.
