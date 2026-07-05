@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-07-05 - Focused Security Patches and Scope Management
+**Vulnerability:** Moderate vulnerabilities in transitive dependencies (follow-redirects, qs) and missing defense-in-depth headers (Referrer-Policy).
+**Learning:** Combining multiple types of security improvements (dependency overrides + HTML hardening) in a single PR can be rejected for being out of scope or exceeding line count constraints. Security tasks should be atomic and focused.
+**Prevention:** Strictly isolate security fixes into separate, small PRs. Prioritize the most direct fix (like dependency overrides for known CVEs) before adding supplemental defense-in-depth measures.
