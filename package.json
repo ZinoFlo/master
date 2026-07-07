@@ -21,5 +21,10 @@
   "homepage": "https://github.com/ZinoFlo/master#readme",
   "devDependencies": {
     "http-server": "^14.1.1"
+  },
+  "overrides": {
+    "//": "Forced upgrade to address potential vulnerabilities in transitive dependencies (GHSA-r4q5-vmmm-2653, GHSA-q8mj-m7cp-5q26)",
+    "follow-redirects": "1.16.0",
+    "qs": "6.15.3"
   }
 }
