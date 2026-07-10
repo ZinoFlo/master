@@ -2,6 +2,11 @@
   "name": "eco-growth-discovery",
   "version": "1.0.0",
   "description": "Eco-growth discovery project",
+  "//": "Overrides are used to mitigate vulnerabilities in transitive dependencies (follow-redirects <=1.15.11, qs 6.11.1 - 6.15.1).",
+  "overrides": {
+    "follow-redirects": "1.16.0",
+    "qs": "6.15.3"
+  },
   "main": "index.js",
   "scripts": {
     "start": "http-server -p 3000",
