@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-07-30 - Transitive Vulnerabilities in HTTP Server Subdependencies
+**Vulnerability:** Transitive dependencies `follow-redirects` (auth header leak / CVE-2025-24357) and `qs` (DoS / GHSA-q8mj-m7cp-5q26) pulled by `http-server` contain vulnerabilities.
+**Learning:** Overrides in package.json must be structured carefully to prevent `npm install` failures; comments must reside at the root level, not within the `overrides` block. Rebuilding the lockfile via clean install ensures proper subdependencies (like `es-define-property` for `qs`) are correctly populated.
+**Prevention:** Use root-level descriptor keys for documentation and regenerate the lockfile by deleting `package-lock.json` and `node_modules` before running `npm install`.
