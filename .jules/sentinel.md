@@ -7,3 +7,8 @@
 **Vulnerability:** Use of 'unsafe-inline' in style-src directive allows for potential CSS injection attacks and bypasses standard CSP protections.
 **Learning:** Moving inline styles from index.html to index.css allows for the removal of 'unsafe-inline' from the Content Security Policy, significantly hardening the add-in against style-based attacks without affecting functionality.
 **Prevention:** Avoid inline <style> blocks and 'style' attributes. Always use external stylesheets and a restrictive style-src 'self' CSP directive.
+
+## 2026-08-07 - Overriding Transitive Dependencies for Safer Office Add-ins
+**Vulnerability:** The devDependency `http-server@14.1.1` introduced moderate vulnerabilities through its transitive dependencies: `follow-redirects` leaking authentication headers (GHSA-r4q5-vmmm-2653 / CVE-2025-24357) and `qs` triggerable DoS (GHSA-q8mj-m7cp-5q26).
+**Learning:** Pinning transitive dependencies to safe versions (`1.16.0` and `6.15.3` respectively) via `overrides` in `package.json` successfully mitigates these CVEs without requiring upgrades of direct dependencies. To document the security reasoning cleanly without failing `npm install`, the reasoning must be placed as a root-level `"//SentinelOverrides"` key in `package.json`.
+**Prevention:** Regularly run `npm audit` and utilize root-level `overrides` with descriptive metadata comments to keep transitive dependencies secure and lockfiles fully synchronized.
