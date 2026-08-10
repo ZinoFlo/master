@@ -1,0 +1,30 @@
+{
+  "name": "eco-growth-discovery",
+  "version": "1.0.0",
+  "description": "Eco-growth discovery project",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "test": "echo \"No tests implemented yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ZinoFlo/master.git"
+  },
+  "keywords": [],
+  "author": "JulienVink",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ZinoFlo/master/issues"
+  },
+  "homepage": "https://github.com/ZinoFlo/master#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "//SentinelOverrides": "Pin follow-redirects to 1.16.0 to mitigate GHSA-r4q5-vmmm-2653 / CVE-2025-24357 and qs to 6.15.3 to mitigate GHSA-q8mj-m7cp-5q26",
+  "overrides": {
+    "follow-redirects": "1.16.0",
+    "qs": "6.15.3"
+  }
+}
