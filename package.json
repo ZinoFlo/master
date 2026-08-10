@@ -22,7 +22,7 @@
   "devDependencies": {
     "http-server": "^14.1.1"
   },
-  "//SentinelOverrides": "Mitigate CVE-2025-24357 (follow-redirects) and GHSA-q8mj-m7cp-5q26 (qs) by pinning safe versions",
+  "//SentinelOverrides": "Pin follow-redirects to 1.16.0 to mitigate GHSA-r4q5-vmmm-2653 / CVE-2025-24357 and qs to 6.15.3 to mitigate GHSA-q8mj-m7cp-5q26",
   "overrides": {
     "follow-redirects": "1.16.0",
     "qs": "6.15.3"
