@@ -1,6 +1,6 @@
-# Google App Engine generated folder
-appengine-generated/
-
-# Node.js
+# 🛡️ Sentinel: Standard security-focused ignores
 node_modules/
-npm-debug.log
+dist/
+.env
+*.log
+.DS_Store

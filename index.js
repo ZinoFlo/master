@@ -11,12 +11,12 @@ Office.onReady((info) => {
     // Retrieve and display initials
     const initialsDisplay = document.getElementById("initials-display");
     if (initialsDisplay) {
-      // Default initials from the project template metadata (ZinoFlo)
-      let initials = "ZV";
+      // Default initials from the project template metadata (Julien Vink)
+      let initials = "JV";
 
       // Note: Office.context.userProfile is primarily for Outlook.
       // In PowerPoint, user information is not directly exposed via simple properties.
-      // We use "ZV" as the primary identifier for this specialized add-in.
+      // We use "JV" as the primary identifier for this specialized add-in.
 
       initialsDisplay.textContent = initials;
     }
