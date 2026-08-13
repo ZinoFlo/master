@@ -8,6 +8,7 @@
   <Id>47adf105-bcee-4e37-bf03-b5d0c15d7aee</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>JulienVink</ProviderName>
+  <ProviderName>ZinoFlo</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Eco-growth Discovery" />
   <Description DefaultValue="Uncover your story with Eco-growth Discovery." />

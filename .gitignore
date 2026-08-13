@@ -4,3 +4,9 @@ appengine-generated/
 # Node.js
 node_modules/
 npm-debug.log
+# 🛡️ Sentinel: Standard security-focused ignores
+node_modules/
+dist/
+.env
+*.log
+.DS_Store

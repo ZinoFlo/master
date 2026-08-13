@@ -21,8 +21,9 @@ Available on:
   http://192.168.0.2:3000
 Hit CTRL-C to stop the server
 
-[2026-02-22T06:04:23.612Z]  "GET /index.html" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36"
-(node:6810) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+[2026-02-22T06:04:14.068Z]  "GET /" "curl/8.5.0"
+(node:5766) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-02-22T06:04:23.758Z]  "GET /index.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36"
+[2026-02-22T06:04:48.231Z]  "GET /" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36"
+[2026-02-22T06:04:48.370Z]  "GET /index.js" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/143.0.7499.4 Safari/537.36"
 http-server stopped.
