@@ -20,3 +20,14 @@ The add-in now integrates with the **Jules API** to fetch and display "sources" 
 - `index.html`: The main task pane UI.
 - `index.js`: Core logic for authentication, API calls, and UI rendering.
 - `api.test.js`: Unit tests for the API integration.
+
+## CSV watcher
+
+`watch_csv_to_json.py` polls an input directory and converts each stable CSV file
+to a pretty-printed UTF-8 JSON array in the output directory. It preserves
+non-ASCII characters, supports BOM-prefixed files, generates field names when a
+CSV has no header row, and writes conversion events to `conversion.log`.
+
+```text
+python watch_csv_to_json.py ./incoming ./converted --interval 5
+```
